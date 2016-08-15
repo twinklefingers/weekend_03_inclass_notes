@@ -3,6 +3,8 @@ $(document).ready(function() {
     console.log('werkin');
     //event listener
     $('#calcForm').on('submit', function() {
+        event.preventDefault();
+
         console.log('calculate');
         var math = {};
         var fields = $(this).serialzeArray();
@@ -13,13 +15,11 @@ $(document).ready(function() {
 
     console.log('given math obhect: ', math);
     $.ajax({
-        type: "POST",
+        type: "POST", // route needs same type , same url (router.post)
         url: '/calculate/' + math.operation, //add //sub //multiply //divide //this is a dynamically created URL
         data: math,
         success: updateDom
-
     });
-
 });
 
 function updateDom(response) {
