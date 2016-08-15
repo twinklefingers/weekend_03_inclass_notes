@@ -32,7 +32,7 @@ router.post('/div', function(req, res) {
 });
 
 // url: /calculate/mul
-router.post('/mul', function(req, res) {
+router.post('/mult', function(req, res) {
     var math = req.body;
     var answer = parseInt(math.inputX) * parseInt(math.inputY);
     console.log('answer: ', answer);
