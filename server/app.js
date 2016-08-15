@@ -2,7 +2,7 @@ var express = require('express'); //thrid party, require by name
 var app = express();
 var bodyParser = require('body-parser');
 
-var index = require('./routes/index.js'); //something is wrong here?
+var index = require('./routes/index.js');
 var calculate = require('./routes/calculate.js');
 
 app.use(bodyParser.urlencoded({
@@ -10,7 +10,8 @@ app.use(bodyParser.urlencoded({
 }));
 
 //routes
-app.use('/', index); //something is wrong here?
+app.use('/calculate', calculate); // always takes 2 parameters, the file route and the variable from the require statement
+app.use('/', index); // less specific, so put after
 
 
 app.set('port', process.env.PORT || 5000);
