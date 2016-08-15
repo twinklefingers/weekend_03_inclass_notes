@@ -15,7 +15,7 @@ npm install express --save
 npm install body-parser --save
 
 basic app.js:
-<code>
+```javascript
 var express = require('express'); //thrid party, require by name
 var app = express();
 var bodyParser = require('body-parser');
@@ -30,10 +30,10 @@ app.set('port', process.env.PORT || 5000);
 app.listen(app.get('port'), function() {
     console.log('Server now running at port ', app.get('port'));
 });
-</code>
+```
 
 basic route.js:
-<code>
+```javascript
 var express = require('express');
 var router = express.Router();
 
@@ -43,10 +43,10 @@ router.get('/<putstarhere>', function(req, res) {
 });
 
 module.exports = router;
-</code>
+```
 
 basic clientapp.js
-<code>
+```javascript
 $(document).ready(function() {
 
     console.log('werkin');
@@ -73,4 +73,4 @@ $(document).ready(function() {
 function updateDom(response) {
     console.log('server says: ', response);
 }
-</code>
+```
