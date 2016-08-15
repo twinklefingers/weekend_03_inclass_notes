@@ -13,7 +13,7 @@ $(document).ready(function() {
         });
     });
 
-    console.log('given math obhect: ', math);
+    console.log('given math object: ', math);
     $.ajax({
         type: "POST", // route needs same type , same url (router.post)
         url: '/calculate/' + math.operation, //add //sub //multiply //divide //this is a dynamically created URL

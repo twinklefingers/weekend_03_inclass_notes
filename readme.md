@@ -34,7 +34,7 @@ basic route.js:
 var express = require('express');
 var router = express.Router();
 
-router.get('/*', function(req, res) {
+router.get('/<putstarhere>', function(req, res) {
     var file = req.params[0] || '/views/index.html';
     res.sendFiles(path.join(__dirname, '../public', file));
 });
@@ -55,7 +55,7 @@ $(document).ready(function() {
         });
     });
 
-    console.log('given math obhect: ', math);
+    console.log('given math object: ', math);
     $.ajax({
         type: "POST",
         url: '/calculate' + math.operation, //add //sub //multiply //divide //this is a dynamically created URL
