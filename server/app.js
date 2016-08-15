@@ -2,7 +2,8 @@ var express = require('express'); //thrid party, require by name
 var app = express();
 var bodyParser = require('body-parser');
 
-var index = ('../routes/index.js'); //something is wrong here?
+var index = ('./routes/index.js'); //something is wrong here?
+var calculate = ('./routes/calculate.js');
 
 app.use(bodyParser.urlencoded({
     extended: true
