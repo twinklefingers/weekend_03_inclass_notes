@@ -7,7 +7,7 @@ router.get('/*', function(req, res) {
     console.log('file: ', req.params[0]);
     var file = req.params[0] || '/views/index.html';
 
-    res.sendFiles(path.join(__dirname, '../public', file));
+    res.sendFile(path.join(__dirname, '../public', file));
 });
 
 module.exports = router;
